@@ -7,6 +7,7 @@ currently only pre-process function now.
 
 process of analysis below:
 <p align="center"><img width="80%" src="analysis.png" /></p>
+(with brown pixelization on user name)
 
 reference:
 https://github.com/xenova/chat-downloader
