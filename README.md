@@ -6,7 +6,7 @@ This is a tool for analysis youtuber/vtuber streaming data
 currently only pre-process function now.
 
 process of analysis below:
-<p align="center"><img width="80%" src="analysis.png" /></p>
+<p align="center"><img width="80%" src="analysisprocess.png" /></p>
 (with brown pixelization on user name)
 
 reference:
