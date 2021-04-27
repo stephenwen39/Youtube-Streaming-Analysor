@@ -9,5 +9,7 @@ process of analysis below:
 <p align="center"><img width="80%" src="analysisProcess.png" /></p>
 (with brown pixelization on user name)
 
+process data flow by split chracters.
+
 reference:
 https://github.com/xenova/chat-downloader
