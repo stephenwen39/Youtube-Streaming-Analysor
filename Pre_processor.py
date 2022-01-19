@@ -1,5 +1,3 @@
-from chat_downloader import ChatDownloader
-
 class analysor(object):
 
   def __init__(self, url):
@@ -26,24 +24,24 @@ class analysor(object):
         #test_line = test[i].split('|')
         
 
-      else: #不存在負號
+      else: # no negative sign
 
         self.post.append(value)
-        test_line = value.split('|') #分割時間與其他資料
+        test_line = value.split('|') # split the time data and other data
         self.time.append(self.Time_processor(test_line[0]))
 
-        if 'Member' in test_line[1]:#辨識成員與否
-          #是成員
+        if 'Member' in test_line[1]: # tell he/she is subscriber or not
+          # is subscriber
           self.Name_Chat_processor(test_line[1], '))')
 
         elif 'New' in test_line[1]:
-          #是新成員
+          # is new subscriber
           if "Moderator" in test_line[1]:
             self.Name_Chat_processor(test_line[1], '))')
           else:
             self.Name_Chat_processor(test_line[1], ')')
         else:
-          #非成員
+          # not subscriber
           if 'Moderator' in test_line[1]:
             self.Name_Chat_processor(test_line[1], ')')
           else:
@@ -51,22 +49,24 @@ class analysor(object):
     return self
 
   def Name_Chat_processor(self, test_line, signal):
-    if signal is ')': #新成員且不是管理員
+    if signal is ')': # new subscriber and not MOD
       test_brac = test_line.split(')')
-      test_name_chat = test_brac[1].split(':') #test_name_chat 0號是名稱, 1號是留言
+      test_name_chat = test_brac[1].split(':') #test_name_chat 0 is name, 1 is message
+      self.name.append(test_name_chat[0])
+      print(test_name_chat[0])
+      print(test_name_chat[1])
+      self.chat.append(test_name_chat[1])
+      self.Chat_dictionary(test_name_chat[0], test_name_chat[1])
+
+    if signal is '))': # old subscriber
+      test_brac = test_line.split(')')
+      test_name_chat = test_brac[1].split(':') #test_name_chat 0 is name, 1 is message
       self.name.append(test_name_chat[0])
       self.chat.append(test_name_chat[1])
       self.Chat_dictionary(test_name_chat[0], test_name_chat[1])
 
-    if signal is '))': #老成員，不一定非管理員
-      test_brac = test_line.split(')')
-      test_name_chat = test_brac[1].split(':') #test_name_chat 0號是名稱, 1號是留言
-      self.name.append(test_name_chat[0])
-      self.chat.append(test_name_chat[1])
-      self.Chat_dictionary(test_name_chat[0], test_name_chat[1])
-
-    if signal is '0': #不是成員
-      test_name_chat = test_line.split(':') #test_name_chat 0號是名稱, 1號是留言
+    if signal is '0': #not subscriber
+      test_name_chat = test_line.split(':') #test_name_chat 0 is name, 1 is message
       self.name.append(test_name_chat[0])
       self.chat.append(test_name_chat[1])
       self.Chat_dictionary(test_name_chat[0], test_name_chat[1])
@@ -81,7 +81,7 @@ class analysor(object):
       return int(time_split[0])
 
   def Chat_dictionary(self, temp_name, temp_chat):
-    #使用字典把每個人的留言數量跟留言都記錄下來
+    # use dict. to save every message of every user
     if temp_name in self.name_chat.keys():
       self.name_chat[temp_name].append(temp_chat)
     else:
@@ -110,6 +110,13 @@ class analysor(object):
   
   def name_chat_printer(self):
     return self.name_chat
+
+  def name_chat_amount(self): 
+    # print the numbers of messages that every user sended
+    temp = {}
+    for i in self.name_chat:
+      temp[i] = len(self.name_chat[i])
+    return temp
   
   
 '''
