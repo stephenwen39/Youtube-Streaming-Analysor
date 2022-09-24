@@ -11,5 +11,7 @@ process of analysis below:
 
 process data flow by split chracters.
 
+<p align="center"><img width="80%" src="description.png" /></p>
+
 reference:
 https://github.com/xenova/chat-downloader
