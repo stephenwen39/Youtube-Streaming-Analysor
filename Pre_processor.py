@@ -1,3 +1,9 @@
+'''
+from chat_downloader import ChatDownloader
+from matplotlib import pyplot as plt
+import numpy as np
+'''
+
 class analysor(object):
 
   def __init__(self, url):
