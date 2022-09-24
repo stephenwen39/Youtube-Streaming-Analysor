@@ -120,8 +120,49 @@ class analysor(object):
   
   
 '''
-TEST HERE
+# TEST HERE
 doo = analysor('https://www.youtube.com/watch?v=-T9LBEwUnho')
 doo.main()
 doo.name_chat_printer()
+'''
+class compare_different_video(object):
+    def __init__(self, url_list):
+        self.url_list = url_list
+        self.url_dict = {}
+        self.time_text_number = {}
+        self.name_chat_pair = {}
+        self.length_dict = {}
+        self.normalization_length_dict = {}
+        for i, v in enumerate(url_list):
+            self.url_dict['url_'+str(i)] = analysor(v)
+            self.url_dict['url_'+str(i)].main()
+            self.time_text_number['url_'+str(i)] = self.url_dict['url_'+str(i)].Time_counter()
+            self.name_chat_pair['url_'+str(i)] = self.url_dict['url_'+str(i)].name_chat_amount()
+    
+    def compare_audience_chat_number(self):
+        # get the name chat dict of different videos
+        for i, v in enumerate(self.url_list):
+            temp = []
+            for ii in self.url_dict['url_'+str(i)].name_chat:
+                temp.append(len(ii))
+            temp.sort()
+            self.length_dict['url_'+str(i)] = temp.copy()
+            max_ = max(temp)
+            min_ = min(temp)
+            range = max_ - min_
+            temp = np.array(temp)
+            temp = (temp - min_) / range
+            self.length_dict['url_'+str(i)] = temp.copy()
+            for ii, vv in enumerate(self.length_dict['url_'+str(i)]):
+                plt.bar(ii, vv, color='black')
+            fig = plt.gcf()
+            fig.set_size_inches(1, 4)
+            plt.show()
+        return self
+'''
+# TEST HERE
+url_list = ['STREAMING URL 1',
+            'STREAMING URL 2']
+test = compare_different_video(url_list)
+test.compare_audience_chat_number()
 '''
