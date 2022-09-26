@@ -162,7 +162,7 @@ class compare_different_video(object):
             for ii, vv in enumerate(self.length_dict['url_'+str(i)]):
                 plt.bar(ii, vv, color='black')
             fig = plt.gcf()
-            fig.set_size_inches(1, 4)
+            fig.set_size_inches(16, 4)
             plt.show()
         return self
 '''
