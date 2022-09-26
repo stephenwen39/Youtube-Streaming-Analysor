@@ -8,6 +8,8 @@ Currently problem: once there is "New" or "Member" in the user ID, error occour,
 
 Update: problem already fixxed.
 
+-------------------------------
+
 This is a tool for analysis youtuber/vtuber streaming data
 , focus on chat/user pairs data analysis.
 
