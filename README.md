@@ -1,5 +1,9 @@
 # Youtube Streaming Analysor
 
+目前會有一個問題：如果使用者名稱中有New, Member等詞彙會造成判斷錯誤，修改中
+
+Currently problem: once there is "New" or "Member" in the user ID, error occour, fixing.
+
 This is a tool for analysis youtuber/vtuber streaming data
 , focus on chat/user pairs data analysis.
 
