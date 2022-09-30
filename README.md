@@ -6,7 +6,7 @@
 
 Currently problem: once there is "New" or "Member" in the user ID, error occour, fixing.
 
-Update: problem already fixxed.
+Update: problem solved.
 
 -------------------------------
 
