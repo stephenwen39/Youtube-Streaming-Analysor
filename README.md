@@ -1,12 +1,18 @@
 # Youtube Streaming Analysor
 
-目前會有一個問題：如果使用者名稱中有New, Member等詞彙會造成判斷錯誤，修改中
+計劃用pandas把pipeline重構成更有效率的處理方式(11/19)
 
-更新：上述問題已修復
+TO DO: Use pandas package to refactor the data pipeline.(11/19)
 
-Currently problem: once there is "New" or "Member" in the user ID, error occour, fixing.
+-------------------------------
 
-Update: problem solved.
+目前會有一個問題：如果使用者名稱中有New, Member等詞彙會造成判斷錯誤，修改中(10/15)
+
+更新：上述問題已修復(10/16)
+
+Currently problem: once there is "New" or "Member" in the user ID, error occour, fixing. (10/15)
+
+Update: problem solved.(10/16)
 
 -------------------------------
 
