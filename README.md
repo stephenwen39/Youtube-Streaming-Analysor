@@ -22,7 +22,7 @@ https://github.com/xenova/chat-downloader
 
 TIME LINE
 
-2022.11.22: 更改data pipeline，從直接匯入df改成先以list承接再統一匯入df，改善11/21版本的10倍效能。對比Pre_processor.py，此版本增進了40%左右的效能（總花費CPU time從366下降到30），並且具備更多欄位，能達成更多目的
+2022.11.22: 更改data pipeline，從直接匯入df改成先以list承接再統一匯入df，改善11/21版本的10倍效能。對比Pre_processor.py，此版本增進了40%左右的效能（使用同一支直播影片測試，總花費CPU time從366下降到30），並且具備更多欄位，能達成更多目的
 
 2022.11.22: Fix the data pipeline, use list to store raw data instead of using df directly, and improve 10 times of efficiency compare with the version build in 11.21. This version is 40% more efficiency compare with Pre_processor.py.
 
