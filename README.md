@@ -15,6 +15,9 @@ process data flow by split chracters.
 
 <p align="center"><img width="80%" src="description.png" /></p>
 
+Pre_processor_2.0.py output:
+<p align="center"><img width="80%" src="v2_table.png" /></p>
+
 reference:
 https://github.com/xenova/chat-downloader
 
