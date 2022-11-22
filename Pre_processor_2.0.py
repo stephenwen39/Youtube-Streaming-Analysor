@@ -5,9 +5,10 @@ class message_analysor(object):
         
         self.url = url
         self.chat = ChatDownloader().get_chat(self.url)
-        for message in self.chat:   
-            value = self.chat.format(message)
-            self.message_df = self.message_df.append({'raw_data': value}, ignore_index=True)
+        self.test = []
+        for message in self.chat:                        # iterate over messages
+            self.test.append(self.chat.format(message))
+        self.message_df['raw_data'] = self.test
     
     def main(self):
         self.Time_processer()
