@@ -22,6 +22,12 @@ reference:
 https://github.com/xenova/chat-downloader
 
 -------------------------------
+TO DO: 
+1. Add "Verified" judgment mechanism.
+2. Clarify the problem of the ":" sign between name and message.
+3. Build the process of establish new df by group by user id, use it to summerize user data.
+
+-------------------------------
 
 TIME LINE
 
