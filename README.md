@@ -19,7 +19,7 @@ Pre_processor_2.0.py output:
 <p align="center"><img width="80%" src="v2_table.png" /></p>
 
 user_analysor.py output:
-<p align="center"><img width="80%" src="user_table.png" /></p>
+<p align="center"><img width="80%" src="user_info_table.png" /></p>
 
 reference:
 https://github.com/xenova/chat-downloader
