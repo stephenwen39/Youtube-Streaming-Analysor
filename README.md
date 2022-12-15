@@ -55,3 +55,7 @@ TIME LINE
 2022.10.15: 目前會有一個問題：如果使用者名稱中有New, Member等詞彙會造成判斷錯誤，修改中
 
 2022.10.15: Currently problem: once there is "New" or "Member" in the user ID, error occour, fixing.
+
+2020: 製作最早版本的Pre_processor.py
+
+2020: Upload Pre_processor.py
