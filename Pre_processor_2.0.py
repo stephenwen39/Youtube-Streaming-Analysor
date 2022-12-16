@@ -1,4 +1,3 @@
-# Use Pandas to speed up the process
 class message_analysor(object):
     def __init__(self, url):
         self.message_df = pd.DataFrame(columns=['raw_data'])
@@ -14,19 +13,19 @@ class message_analysor(object):
         self.Time_processer()
         self.Identity_name_chat_processer()
         return self.message_df
-    
+
     def Time_processer(self):
-        # 解決時間正負號
+        # 解決時間正負號，階段4
         self.message_df['is_time_positive'] = \
         self.message_df.raw_data.apply(lambda x: False if x[0] == '-' else True)
         
-        # 丟棄時間負號
+        # 丟棄時間負號，階段5
         self.message_df['raw_data'] = \
         self.message_df.raw_data.apply(lambda x: x if x[0] != '-' else x[1:])
-        
-        # 解決時間
+        # 解決時間，階段6
         self.message_df['time'] = \
         self.message_df.raw_data.apply(lambda x: x.split('|')[0])
+        # 階段7
         self.message_df['raw_data'] = \
         self.message_df.raw_data.apply(lambda x: x.split('|', 1)[1])
 
@@ -34,10 +33,24 @@ class message_analysor(object):
     
     def Identity_name_chat_processer(self):
         # 如果接下來[0]是'('表示他有一定的身份，為類別1，否則就是others，為類別2
-        # 類別1的前三個字會透露他的身份，'Mod','Mem','Own','New'，所以分流處理
-        # 分流使用def實作並交由apply套用處理
+        # 類別1的前三個字會透露他的身份，'Mod','Mem','Own','New'等等，所以分流處理
+        # 分流使用def function實作並交由apply套用處理
         # 分流確認身份後，再確認身份時間
         # 如果是other就直接給予other身份就好
+        def Verified_filter(x):
+            if x[2:5] == 'Ver':
+                return True
+            else:
+                return False
+        def Verified_deleter(x):
+            if x[2:5] == 'Ver': #Verified
+                if x[11] == ',':
+                    ans = x.split(',', 1)[1]
+                    ans = ans.split(' ', 1)[1]
+                    return ' (' + ans
+                else:
+                    return x.split(')', 1)[1]
+            return x
         def identity_filter(x):
             if x[1] == '(':
                 if x[2:5] == 'Mem':
@@ -57,7 +70,7 @@ class message_analysor(object):
             if x[1] == '(':
                 if x[2:5] == 'Mem':
                     return x.split('(', 2)[2]
-                elif x[2:5] == 'Mod':
+                elif x[2:5] == 'Mod': # 假設若多重身份Mod會在第一個
                     if x[11] == ',':
                         return x.split('(', 2)[2]
                     return x.split('(', 1)[1]
@@ -92,6 +105,12 @@ class message_analysor(object):
                 return x.split(' ', 1)[1] # name
             value = x.split(')', 2)
             return value[2]
+        # 建立Verified身份
+        self.message_df['Verified_or_not'] = \
+        self.message_df.raw_data.apply(Verified_filter)
+        # 移除Verified 在raw_data中的身份
+        self.message_df['raw_data'] = \
+        self.message_df.raw_data.apply(Verified_deleter)
         # 建立身份欄位
         self.message_df['user_identity'] = \
         self.message_df.raw_data.apply(identity_filter)
@@ -113,8 +132,10 @@ class message_analysor(object):
         # 丟棄身份時間
         self.message_df['raw_data'] = \
         self.message_df.raw_data.apply(time_deleter)
+        # 改成user_id
+        self.message_df = self.message_df.rename({'raw_data': 'user_id'}, axis=1)
+        
         return self
-
 # 下面是示範code
 # Try the following code
 url = 'https://www.youtube.com/watch?v=pQi2A8ndsYg&ab_channel=USAGIHIMECLUB.%E5%85%94%E5%A7%AC'
