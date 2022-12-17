@@ -15,6 +15,17 @@ class message_analysor(object):
         return self.message_df
 
     def Time_processer(self):
+        def time_string_add(x):
+            if x[-1] == ' ':
+                x = x.split(' ', 1)[0]
+            if len(x) == 4: # 1:21
+                return '00:0'+x
+            elif len(x) == 5: # 17:31
+                return '00:'+x
+            elif len(x) == 7: # 1:21:21
+                return '0'+x
+            else:
+                return x
         # 解決時間正負號，階段4
         self.message_df['is_time_positive'] = \
         self.message_df.raw_data.apply(lambda x: False if x[0] == '-' else True)
@@ -22,9 +33,16 @@ class message_analysor(object):
         # 丟棄時間負號，階段5
         self.message_df['raw_data'] = \
         self.message_df.raw_data.apply(lambda x: x if x[0] != '-' else x[1:])
-        # 解決時間，階段6
+        # 擷取小時、分鐘、秒數
         self.message_df['time'] = \
         self.message_df.raw_data.apply(lambda x: x.split('|')[0])
+        # 補齊符合datetime的時間字串格式
+        self.message_df['time'] = \
+        self.message_df.time.apply(time_string_add)
+        # 先轉換time成datetime才可以再轉換為time
+        self.message_df['time'] = pd.to_datetime(self.message_df['time'])
+        # 轉換datetime為time
+        self.message_df['time'] = self.message_df.time.dt.time
         # 階段7
         self.message_df['raw_data'] = \
         self.message_df.raw_data.apply(lambda x: x.split('|', 1)[1])
@@ -33,8 +51,8 @@ class message_analysor(object):
     
     def Identity_name_chat_processer(self):
         # 如果接下來[0]是'('表示他有一定的身份，為類別1，否則就是others，為類別2
-        # 類別1的前三個字會透露他的身份，'Mod','Mem','Own','New'等等，所以分流處理
-        # 分流使用def function實作並交由apply套用處理
+        # 類別1的前三個字會透露他的身份，'Mod','Mem','Own','New'，所以分流處理
+        # 分流使用def實作並交由apply套用處理
         # 分流確認身份後，再確認身份時間
         # 如果是other就直接給予other身份就好
         def Verified_filter(x):
@@ -52,6 +70,7 @@ class message_analysor(object):
                     return x.split(')', 1)[1]
             return x
         def identity_filter(x):
+            # 多考量一個verified, 只要帳號有勾勾就是有，跟會員與否無關
             if x[1] == '(':
                 if x[2:5] == 'Mem':
                     return 'Member'
@@ -136,10 +155,12 @@ class message_analysor(object):
         self.message_df = self.message_df.rename({'raw_data': 'user_id'}, axis=1)
         
         return self
+
 # 下面是示範code
-# Try the following code
+# url = 'https://www.youtube.com/watch?v=azPLdPnqAMQ&t=1s'
 url = 'https://www.youtube.com/watch?v=pQi2A8ndsYg&ab_channel=USAGIHIMECLUB.%E5%85%94%E5%A7%AC'
+# url = 'https://www.youtube.com/watch?v=aHbiwZbmkuQ'
 a = message_analysor(url)
 
-df3 = a.main()
-df3.head(30)
+df = a.main()
+df.tail(30)
