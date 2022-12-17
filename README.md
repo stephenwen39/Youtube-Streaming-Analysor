@@ -35,9 +35,9 @@ TO DO:
 
 TIME LINE
 
-2022.12.17: 新增live_info.py，可以依據live時間計算使用者留言量、使用者list、留言list
+2022.12.17: 新增live_info.py，可以依據live時間（分鐘數）計算使用者留言量、使用者list、留言list，如果該時間沒有留言，會顯示0個使用者、以及兩個空白list
 
-2022.12.17: Upload live_info.py, it based on timeline to summarized user/messages information.
+2022.12.17: Upload live_info.py, it based on minutes to summarized user/messages information.
 
 2022.12.15: 新增user_analysor.py檔案，功能是彙整該直播中的所有使用者資訊，另外之前沒考量的Verified身份也在這次更新中修正完成
 
