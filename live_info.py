@@ -16,6 +16,10 @@ class live_info(object):
         df_temp_1 = df_temp_1.merge(df_temp_3, on='time', how='inner')
         # 補齊空白時間，之後畫圖比較好畫
         df_result = self.complete_blank_time(df_temp_1)
+        # rename
+        df_result.rename(columns = {'user_id_x':'user_cnt', 
+                                    'user_id_y':'users_list',
+                                    'message':'message_list'}, inplace = True)
         return df_result
     
     def groupby_minutes(self):
