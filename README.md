@@ -11,13 +11,12 @@ process of analysis below:
 <p align="center"><img width="80%" src="analysisProcess.png" /></p>
 (with brown pixelization on user name)
 
-process data flow by split chracters.
+(process data flow by split chracters.)
 
 Work_flow
 <p align="center"><img width="80%" src="Work_flow.png" /></p>
 
-E.g. One of the applications, sum(distinct_user_messages) and sort() in ONE streaming live:
-<p align="center"><img width="80%" src="description.png" /></p>
+Below is how it look like of every output.
 
 Pre_processor_2.0.py output:
 <p align="center"><img width="80%" src="v2_table.png" /></p>
@@ -27,6 +26,9 @@ user_analysor.py output:
 
 live_info.py output:
 <p align="center"><img width="80%" src="live_info.png" /></p>
+
+E.g. One of the applications, sum(distinct_user_messages) and sort() in ONE streaming live:
+<p align="center"><img width="80%" src="description.png" /></p>
 
 reference:
 https://github.com/xenova/chat-downloader
