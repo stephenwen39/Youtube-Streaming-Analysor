@@ -13,6 +13,9 @@ process of analysis below:
 
 process data flow by split chracters.
 
+Work_flow
+<p align="center"><img width="80%" src="Work_flow.png" /></p>
+
 <p align="center"><img width="80%" src="description.png" /></p>
 
 Pre_processor_2.0.py output:
