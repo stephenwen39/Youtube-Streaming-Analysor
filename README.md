@@ -40,6 +40,12 @@ TO DO:
 2. Automatically compare different streamers and different live stream.
 
 -------------------------------
+Problems list:
+1. Users id are not unique.
+
+2. Users id is changeable.
+
+-------------------------------
 
 TIME LINE
 
