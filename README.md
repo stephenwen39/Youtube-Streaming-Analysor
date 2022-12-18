@@ -21,7 +21,7 @@ Three examples(based on user's messages):
 <p align="center"><img width="80%" src="description.png" /></p>
 
 Work_flow
-<p align="center"><img width="80%" src="Work_flow.png" /></p>
+<p align="center"><img width="80%" src="Work_flow_2.png" /></p>
 
 Below is how it look like of every output.
 
