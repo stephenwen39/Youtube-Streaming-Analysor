@@ -16,6 +16,7 @@ process data flow by split chracters.
 Work_flow
 <p align="center"><img width="80%" src="Work_flow.png" /></p>
 
+E.g. One of the applications, sum(distinct_user_messages) and sort() in ONE streaming live:
 <p align="center"><img width="80%" src="description.png" /></p>
 
 Pre_processor_2.0.py output:
