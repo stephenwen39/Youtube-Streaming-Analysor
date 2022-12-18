@@ -49,6 +49,10 @@ Problems list:
 
 TIME LINE
 
+2022.12.18: 修正名稱開頭有'()'者導致的身份識別錯誤與姓名切割錯誤
+
+2022.12.18: Fix the problem of the starting of the user id include '()'.
+
 2022.12.17: 新增live_info.py，可以依據live時間（分鐘數）計算使用者留言量、使用者list、留言list，如果該時間沒有留言，會顯示0個使用者、以及兩個空白list
 
 2022.12.17: Upload live_info.py, it based on minutes to summarized user/messages information.
