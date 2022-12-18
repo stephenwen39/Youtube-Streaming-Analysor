@@ -1,3 +1,4 @@
+# 12/16的內容
 class message_analysor(object):
     def __init__(self, url):
         self.message_df = pd.DataFrame(columns=['raw_data'])
@@ -71,7 +72,9 @@ class message_analysor(object):
             return x
         def identity_filter(x):
             # 多考量一個verified, 只要帳號有勾勾就是有，跟會員與否無關
-            if x[1] == '(':
+            # if 後面的 and是為了確保不會有user id長得像「(帽子)北海市長孔文舉」
+            # 因為一般來說()裡面是要識別其身份
+            if x[1] == '(' and x[2:5] in ('Mem', 'Mod', 'New', 'Own'):
                 if x[2:5] == 'Mem':
                     return 'Member'
                 elif x[2:5] == 'Mod':
@@ -86,7 +89,7 @@ class message_analysor(object):
                 return 'other'
         
         def identity_deleter(x):
-            if x[1] == '(':
+            if x[1] == '(' and x[2:5] in ('Mem', 'Mod', 'New', 'Own'):
                 if x[2:5] == 'Mem':
                     return x.split('(', 2)[2]
                 elif x[2:5] == 'Mod': # 假設若多重身份Mod會在第一個
@@ -121,7 +124,11 @@ class message_analysor(object):
             try:
                 num = int(x[0])
             except:
-                return x.split(' ', 1)[1] # name
+                try:
+                    return x.split(' ', 1)[1] # name
+                except:
+                    print('error time_deleter:',x)
+                    return x.split(' ', 1)[0] # name
             value = x.split(')', 2)
             return value[2]
         # 建立Verified身份
@@ -157,10 +164,8 @@ class message_analysor(object):
         return self
 
 # 下面是示範code
-# url = 'https://www.youtube.com/watch?v=azPLdPnqAMQ&t=1s'
-url = 'https://www.youtube.com/watch?v=pQi2A8ndsYg&ab_channel=USAGIHIMECLUB.%E5%85%94%E5%A7%AC'
-# url = 'https://www.youtube.com/watch?v=aHbiwZbmkuQ'
+url = 'https://www.youtube.com/watch?v=0m_Z8FSuBDQ'
 a = message_analysor(url)
 
 df = a.main()
-df.tail(30)
+df.tail(5)
