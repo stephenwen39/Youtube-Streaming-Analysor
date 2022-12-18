@@ -37,6 +37,8 @@ https://github.com/xenova/chat-downloader
 TO DO: 
 1. Clarify the problem of the ":" sign between name and message.
 
+2. Automatically compare different streamers and different live stream.
+
 -------------------------------
 
 TIME LINE
