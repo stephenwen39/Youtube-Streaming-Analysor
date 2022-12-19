@@ -43,6 +43,8 @@ TO DO:
 
 2. Automatically compare different streamers and different live stream.
 
+3. 由於都屬於同一個pipeline，考慮把目前的所有classes都寫為一個class，以def function來取代本來的多classes情況，使用上會更好懂，並把視覺化功能也寫進function中
+
 -------------------------------
 Problems list:
 1. Users id are not unique.
