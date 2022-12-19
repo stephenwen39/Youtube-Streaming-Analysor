@@ -8,31 +8,31 @@ This is a tool for analysis youtuber/vtuber streaming data
 currently only pre-process function now.
 
 process of analysis below:
-<p align="center"><img width="50%" src="analysisProcess.png" /></p>
+<p align="center"><img width="65%" src="analysisProcess.png" /></p>
 (with brown pixelization on user name)
 
 (process data flow by split chracters.)
 
 Three examples(based on user's messages):
-<p align="center"><img width="80%" src="compare_three_live.png" /></p>
+<p align="center"><img width="65%" src="compare_three_live.png" /></p>
 
-<p align="center"><img width="80%" src="compare_three_live_2.png" /></p>
+<p align="center"><img width="65%" src="compare_three_live_2.png" /></p>
 
-<p align="center"><img width="80%" src="description.png" /></p>
+<p align="center"><img width="65%" src="description.png" /></p>
 
 Data pipeline:
-<p align="center"><img width="80%" src="Work_flow_3.png" /></p>
+<p align="center"><img width="65%" src="Work_flow_3.png" /></p>
 
 Below is how it look like of every output.
 
 Pre_processor_2.0.py output:
-<p align="center"><img width="80%" src="v2_table.png" /></p>
+<p align="center"><img width="65%" src="v2_table.png" /></p>
 
 user_analysor.py output:
-<p align="center"><img width="80%" src="user_info_table.png" /></p>
+<p align="center"><img width="65%" src="user_info_table.png" /></p>
 
 live_info.py output:
-<p align="center"><img width="80%" src="live_info.png" /></p>
+<p align="center"><img width="65%" src="live_info.png" /></p>
 
 reference:
 https://github.com/xenova/chat-downloader
