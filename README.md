@@ -53,6 +53,16 @@ Problems list:
 
 TIME LINE
 
+2022.12.19: 以get_streams_from_channel.py達成頻道直播爬蟲自動化，輸入頻道連結與想爬取的直播url數量，即可取得想要的結果，特別的是我使用下列套件，並且將其修改以符合我的使用需求
+
+reference:https://github.com/dermasmid/scrapetube
+
+2022.12.19: Use get_streams_from_channel.py to automatically crawle the url of particular channel.
+
+reference:https://github.com/dermasmid/scrapetube
+
+2022.12.19: 
+
 2022.12.18: 修正名稱開頭有'()'者導致的身份識別錯誤與姓名切割錯誤
 
 2022.12.18: Fix the problem of the starting of the user id include '()'.
