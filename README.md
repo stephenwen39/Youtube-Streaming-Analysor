@@ -55,6 +55,10 @@ Problems list:
 
 TIME LINE
 
+2022.12.21: 修復get_streams_from_channel.py中，limit小於尚未開始的直播數會回傳錯誤url數量的問題（但是目前是使用效率低的方法，之後可能要直接動source code來繼續改善）
+
+2022.12.21: Fix the problem of get_streams_from_channel.py, now the return urls list is right.
+
 2022.12.19: 以get_streams_from_channel.py達成頻道直播爬蟲自動化，輸入頻道連結與想爬取的直播url數量，即可取得想要的結果，特別的是我使用下列套件，並且將其修改以符合我的使用需求
 
 2022.12.19: Use get_streams_from_channel.py to automatically crawl the URL of a particular channel.
