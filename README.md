@@ -55,6 +55,10 @@ Problems list:
 
 TIME LINE
 
+2022.12.22: 新增單場直播的使用者統計功能
+
+2022.12.22: Upload the user statistics function for a single live broadcast.
+
 2022.12.21: 修復get_streams_from_channel.py中，limit小於尚未開始的直播數會回傳錯誤url數量的問題（但是目前是使用效率低的方法，之後可能要直接動source code來繼續改善）
 
 2022.12.21: Fix the problem of get_streams_from_channel.py, now the return urls list is right.
