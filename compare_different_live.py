@@ -40,12 +40,15 @@ class compare_different_live(object):
         user_df = user_df.fillna(0)
         # 使用user id排序
         user_df = user_df.sort_values(by='user_id')
+        user_df = user_df.reset_index()
+        user_df = user_df.drop(user_df.columns[0], axis=1)
         return user_df
 
     def user_identity_info(self, user_df):
         user_df = user_df.drop_duplicates(['user_id'])
         user_identity_df = user_df.groupby(['user_identity', 'from'])\
         ['user_id'].count().reset_index()
+        user_identity_df.rename(columns = {'user_id':'user_cnt'}, inplace = True)
         user_identity_df = user_identity_df.sort_values(by=['from', 'user_identity'])
         # 整理index
         user_identity_df = user_identity_df.reset_index()
