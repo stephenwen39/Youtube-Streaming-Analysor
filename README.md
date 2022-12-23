@@ -55,6 +55,10 @@ Problems list:
 
 TIME LINE
 
+2022.12.23: 修復live_info.py使用者計數上的錯誤
+
+2022.12.23: Fix the bug of live_info.py.
+
 2022.12.22: 新增單場直播的使用者統計功能
 
 2022.12.22: Upload the user statistics function for a single live broadcast.
