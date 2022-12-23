@@ -13,10 +13,12 @@ process of analysis below:
 
 (process data flow by split chracters.)
 
-Three examples(based on user's messages):
+Four examples(based on user's messages):
 <p align="center"><img width="65%" src="compare_three_live.png" /></p>
 
 <p align="center"><img width="65%" src="compare_three_live_2.png" /></p>
+
+<p align="center"><img width="65%" src="compare_seven_live_chat.png" /></p>
 
 <p align="center"><img width="65%" src="description.png" /></p>
 
