@@ -11,7 +11,6 @@ class live_info(object):
         df_temp_2 = self.user_lister()
         # 基於時間創造該分鐘數的留言list & message_cnt
         df_temp_3 = self.message_lister()
-        print(df_temp_3['message'][1])
         df_temp_3['message_cnt'] = self.message_counter(df_temp_3)
         
         # merge by time
