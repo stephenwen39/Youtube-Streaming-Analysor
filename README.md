@@ -14,27 +14,27 @@ process of analysis below:
 (process data flow by split chracters.)
 
 Four examples(based on user's messages):
-<p align="center"><img width="65%" src="compare_three_live.png" /></p>
+<p align="center"><img width="65%" src="plots/compare_three_live.png" /></p>
 
-<p align="center"><img width="65%" src="compare_three_live_2.png" /></p>
+<p align="center"><img width="65%" src="plots/compare_three_live_2.png" /></p>
 
-<p align="center"><img width="80%" src="compare_seven_live_chat_2.png" /></p>
+<p align="center"><img width="80%" src="plots/compare_seven_live_chat_2.png" /></p>
 
-<p align="center"><img width="65%" src="description.png" /></p>
+<p align="center"><img width="65%" src="plots/description.png" /></p>
 
 Data pipeline:
-<p align="center"><img width="65%" src="Work_flow_3.png" /></p>
+<p align="center"><img width="65%" src="plots/Work_flow_3.png" /></p>
 
 Below is how it look like of every output.
 
 Pre_processor_2.0.py output:
-<p align="center"><img width="65%" src="v2_table.png" /></p>
+<p align="center"><img width="65%" src="plots/v2_table.png" /></p>
 
 user_analysor.py output:
-<p align="center"><img width="65%" src="user_info_table.png" /></p>
+<p align="center"><img width="65%" src="plots/user_info_table.png" /></p>
 
 live_info.py output:
-<p align="center"><img width="65%" src="live_info.png" /></p>
+<p align="center"><img width="65%" src="plots/live_info.png" /></p>
 
 reference:
 https://github.com/xenova/chat-downloader
