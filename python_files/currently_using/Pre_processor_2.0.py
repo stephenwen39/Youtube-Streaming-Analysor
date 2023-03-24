@@ -1,4 +1,10 @@
 # 12/16的內容
+from chat_downloader import ChatDownloader
+from chat_downloader.sites import YouTubeChatDownloader
+import numpy as np
+import pandas as pd
+import datetime
+
 class message_analysor(object):
     def __init__(self, url):
         self.message_df = pd.DataFrame(columns=['raw_data'])
