@@ -25,7 +25,7 @@ Four examples(based on user's messages):
 
 <p align="center"><img width="65%" src="plots/description.png" /></p>
 
-Data pipeline:
+Data pipeline(the old one, not using anymore):
 <p align="center"><img width="65%" src="plots/Work_flow_3.png" /></p>
 
 Below is how it look like of every output.
@@ -43,18 +43,9 @@ reference:
 https://github.com/xenova/chat-downloader
 
 -------------------------------
-TO DO: 
-1. Clarify the problem of the ":" sign between name and message.
-
-2. Automatically compare different streamers and different live stream.
-
-3. 由於都屬於同一個pipeline，考慮把目前的所有classes都寫為一個class，以def function來取代本來的多classes情況，使用上會更好懂，並把視覺化功能也寫進function中
-
--------------------------------
 Problems list:
-1. Users id are not unique.
 
-2. Users id is changeable.
+1. Users id is changeable.
 
 -------------------------------
 
