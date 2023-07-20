@@ -60,6 +60,10 @@ Problems list:
 
 TIME LINE
 
+2023.07.20: 將整個流程搬遷到GCP上，用cloud function / Bigquery / Looker studio完成一系列的資料管道與儀表板
+
+2023.07.20: move the project to GCP, using Cloud Function, Bigquery, Looker Studio to build a pipeline and dashboard.
+
 2022.12.23: 修復live_info.py使用者計數上的錯誤
 
 2022.12.23: Fix the bug of live_info.py.
