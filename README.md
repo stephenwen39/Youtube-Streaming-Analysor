@@ -7,7 +7,6 @@ This is a project for analysis youtuber/vtuber streaming data
 
 This data pipeline is currently migrated to the Google Cloud platform. The process is expected to use tools including BigQuery, Cloud Functions, Cloud Composer, etc. Please see the simplified architecture diagram below for the system structure.
 
-Looker Studio Link: https://lookerstudio.google.com/reporting/1b60b8b6-d858-4800-9bdf-3a4f8547ffcd/page/n4aXD
 
 <p align="center"><img width="65%" src="plots/pipeline and dashboard.png" /></p>
 
