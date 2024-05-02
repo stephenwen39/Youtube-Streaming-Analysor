@@ -20,18 +20,6 @@ The following four plots are visualization examples(based on user's messages):
 
 <p align="center"><img width="65%" src="plots/description.png" /></p>
 
-
-Below are screenshots of each table.
-
-Pre_processor_2.0.py output:
-<p align="center"><img width="65%" src="plots/v2_table.png" /></p>
-
-user_analysor.py output:
-<p align="center"><img width="65%" src="plots/user_info_table.png" /></p>
-
-live_info.py output:
-<p align="center"><img width="65%" src="plots/live_info.png" /></p>
-
 reference:
 https://github.com/xenova/chat-downloader
 
