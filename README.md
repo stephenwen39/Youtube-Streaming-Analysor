@@ -2,8 +2,7 @@
 
 -------------------------------
 
-This is a project for analysis of youtuber/vtuber streaming data
-, focus on chat/user pairs data analysis.
+This is a project for analysis of YouTuber/vtuber streaming data, focusing on chat/user pairs data analysis. If you are interested in the evolution, see the TIMELINE of this side-project below.
 
 This data pipeline is currently migrated to the Google Cloud platform. The process is expected to use tools including BigQuery, DBT, Cloud Functions, Cloud Composer, etc. Please see the simplified architecture diagram below for the system structure.
 
@@ -12,7 +11,7 @@ Link: https://lookerstudio.google.com/s/sFWcrXFBtOI
 
 <p align="center"><img width="65%" src="plots/pipeline and dashboard.png" /></p>
 
-Four plots examples(based on user's messages):
+The following four plots are visualization examples(based on user's messages):
 <p align="center"><img width="65%" src="plots/compare_three_live.png" /></p>
 
 <p align="center"><img width="65%" src="plots/compare_three_live_2.png" /></p>
