@@ -2,10 +2,10 @@
 
 -------------------------------
 
-This is a project for analysis youtuber/vtuber streaming data
+This is a project for analysis of youtuber/vtuber streaming data
 , focus on chat/user pairs data analysis.
 
-This data pipeline is currently migrated to the Google Cloud platform. The process is expected to use tools including BigQuery, Cloud Functions, Cloud Composer, etc. Please see the simplified architecture diagram below for the system structure.
+This data pipeline is currently migrated to the Google Cloud platform. The process is expected to use tools including BigQuery, DBT, Cloud Functions, Cloud Composer, etc. Please see the simplified architecture diagram below for the system structure.
 
 Link: https://lookerstudio.google.com/s/sFWcrXFBtOI
 
