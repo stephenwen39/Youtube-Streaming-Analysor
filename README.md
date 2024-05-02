@@ -44,9 +44,13 @@ Problems list:
 
 TIME LINE
 
-2024.05.02: 構思 Looker Studio (LS) 加速方案，主要方向會捨棄目前 LS 中大量的 tables JOIN 行為，LS 的大量 tables JOIN 已經在網路上被公認是影響儀表板載入速度的關鍵之一。同時思考 ClickHouse 的可能性 (由於我們的查詢都相當穩定、固定)。
+2024.05.02: 構思加入 youtube live stream online viewers numbers 的功能 (使用 API: https://developers.google.com/youtube/v3/getting-started?hl=zh-tw#quota)。
 
-2024.05.02: Conceptualize a Looker Studio (LS) processing speed acceleration plan, primarily focusing on abandoning the extensive use of tables JOIN currently in LS. The substantial tables JOIN in LS has been widely recognized on the internet as one of the key factors affecting dashboard loading speed. At the same time, consider the possibility of using ClickHouse (since our queries are quite stable and consistent).
+2024.05.02: Conceptualize a youtube live stream online viewers numbers feature. (API: https://developers.google.com/youtube/v3/getting-started?hl=zh-tw#quota)。
+
+2024.05.01: 構思 Looker Studio (LS) 加速方案，主要方向會捨棄目前 LS 中大量的 tables JOIN 行為，LS 的大量 tables JOIN 已經在網路上被公認是影響儀表板載入速度的關鍵之一。同時思考 ClickHouse 的可能性 (由於我們的查詢都相當穩定、固定)。
+
+2024.05.01: Conceptualize a Looker Studio (LS) processing speed acceleration plan, primarily focusing on abandoning the extensive use of tables JOIN currently in LS. The substantial tables JOIN in LS has been widely recognized on the internet as one of the key factors affecting dashboard loading speed. At the same time, consider the possibility of using ClickHouse (since our queries are quite stable and consistent).
 
 2024.03.02: 加入 DBT trigger BQ pipeline 測試，成功，待部署到 prod 上。
 
