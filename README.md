@@ -20,10 +20,8 @@ The following four plots are visualization examples(based on user's messages):
 
 <p align="center"><img width="65%" src="plots/description.png" /></p>
 
-Data pipeline(the old one, not using anymore):
-<p align="center"><img width="65%" src="plots/Work_flow_3.png" /></p>
 
-Below is how it look like of every output.
+Below are screenshots of each table.
 
 Pre_processor_2.0.py output:
 <p align="center"><img width="65%" src="plots/v2_table.png" /></p>
