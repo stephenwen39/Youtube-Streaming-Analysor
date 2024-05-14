@@ -8,6 +8,7 @@ This data pipeline is currently migrated to the Google Cloud platform. The proce
 
 Link: https://lookerstudio.google.com/s/sFWcrXFBtOI
 
+<p align="center"><img width="65%" src="plots/pipeline and dashboard.png" /></p>
 -------------------------------
 Problems list:
 
@@ -89,8 +90,6 @@ reference:https://github.com/dermasmid/scrapetube
 
 -----------------------------------------
 圖集:
-
-<p align="center"><img width="65%" src="plots/pipeline and dashboard.png" /></p>
 
 The following four plots are visualization examples(based on user's messages):
 <p align="center"><img width="65%" src="plots/compare_three_live.png" /></p>
