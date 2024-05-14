@@ -9,7 +9,9 @@ This data pipeline is currently migrated to the Google Cloud platform. The proce
 Link: https://lookerstudio.google.com/s/sFWcrXFBtOI
 
 <p align="center"><img width="65%" src="plots/pipeline and dashboard.png" /></p>
+
 -------------------------------
+
 Problems list:
 
 1. Users id is changeable.
