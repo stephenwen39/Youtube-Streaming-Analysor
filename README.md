@@ -20,6 +20,10 @@ Problems list:
 
 TIME LINE
 
+2024.05.19: 將 JOIN 操作搬遷到 Bigquery 進行，提高 30 倍的儀表板載入速度。(60秒 -> 2秒)
+
+2024.05.19: Switching the JOIN operation to BigQuery increased the dashboard loading speed by 30 times. (60s -> 2s)
+
 2024.05.02: 構思加入 youtube live stream online viewers numbers 的功能 (使用 API: https://developers.google.com/youtube/v3/getting-started?hl=zh-tw#quota)。
 
 2024.05.02: Conceptualize a youtube live stream online viewers numbers feature. (API: https://developers.google.com/youtube/v3/getting-started?hl=zh-tw#quota)。
