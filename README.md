@@ -2,9 +2,9 @@
 
 -------------------------------
 
-This is a project for analysis of YouTuber/vtuber streaming data, focusing on chat/user pairs data analysis. If you are interested in the evolution, see the TIMELINE of this side-project below.
+This is a project for analysis of YouTuber/vtuber streaming data, focusing on chat/user pairs data analysis. If you are interested in the evolution, see the Change Log(更新時間軸) of this side-project below.
 
-This data pipeline is currently migrated to the Google Cloud platform. The process is expected to use tools including BigQuery, DBT, Cloud Functions, Cloud Composer, etc. Please see the simplified architecture diagram below for the system structure.
+This data pipeline is currently migrated to the Google Cloud platform. Please see the simplified architecture diagram below for the system structure.
 
 Link: [https://lookerstudio.google.com/s/sFWcrXFBtOI](https://lookerstudio.google.com/reporting/d0c687bd-2e96-4fac-ac9a-f1d5844fe8d8)
 
