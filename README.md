@@ -8,7 +8,7 @@ This data pipeline is currently migrated to the Google Cloud platform. The proce
 
 Link: [https://lookerstudio.google.com/s/sFWcrXFBtOI](https://lookerstudio.google.com/reporting/d0c687bd-2e96-4fac-ac9a-f1d5844fe8d8)
 
-<p align="center"><img width="65%" src="plots/pipeline and dashboard.png" /></p>
+<p align="center"><img width="65%" src="plots/pipeline and dashboard_2.png" /></p>
 
 -------------------------------
 
