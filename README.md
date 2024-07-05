@@ -20,9 +20,13 @@ Problems list:
 
 Change Log 更新時間軸
 
-2024.06.30: 增加一個新資料源 "當下觀眾數量"，並且基於此資料源建構一個新的資料管道。這個串流資料管道由 cloud function 與 pubsub 組成，提供直播當下的觀眾數量(資料顆粒度達到每分鐘)。
+2024.07.05: 由於 Youtube Data API 的配額限制過低，改用純爬蟲爬取直播狀態與觀看人數。
 
-2024.06.30: Add a new data source "viewers count", and construct a new pipeline with it. This pipeline is a streaming pipeline consisting of cloud function and pub/sub(Apache Kafka), providing streaming live viewers count per minute.
+2024.07.05: Use Python crawler to get the streaming status and the viewers instead of Youtube Data API, because the quota of it is limited.
+
+2024.06.30: 基於 Youtube Data API 增加一個新資料源 "當下觀眾數量"，並且基於此資料源建構一個新的資料管道。這個串流資料管道由 cloud function 與 pubsub 組成，提供直播當下的觀眾數量(資料顆粒度達到每分鐘)。
+
+2024.06.30: Add a new data source "viewers count" based-on YouTube Data API, and construct a new pipeline with it. This pipeline is a streaming pipeline consisting of cloud function and pub/sub(Apache Kafka), providing streaming live viewers count per minute.
 
 2024.05.19: 將 JOIN 操作搬遷到 Bigquery 進行，提高 30 倍的儀表板載入效率。(60秒 -> 2秒)
 
