@@ -12,12 +12,6 @@ Link: [https://lookerstudio.google.com/s/sFWcrXFBtOI](https://lookerstudio.googl
 
 -------------------------------
 
-Problems list:
-
-1. Users id is changeable.
-
--------------------------------
-
 Change Log 更新時間軸
 
 2024.07.05: 由於 Youtube Data API 的配額限制過低，改用純爬蟲爬取直播狀態與觀看人數。
