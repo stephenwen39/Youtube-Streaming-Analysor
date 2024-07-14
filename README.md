@@ -14,6 +14,10 @@ Link: [https://lookerstudio.google.com/s/sFWcrXFBtOI](https://lookerstudio.googl
 
 Change Log 更新時間軸
 
+2024.07.14: 更新 Looker Studio 視覺效果，加入 online 觀眾折線圖。
+
+2024.07.14: Update ploys in Looker Studio: add the viewer's count line chart.
+
 2024.07.05: 由於 Youtube Data API 的配額限制過低，改用純爬蟲爬取直播狀態與觀看人數。
 
 2024.07.05: Use Python crawler to get the streaming status and the viewers instead of Youtube Data API, because the quota of it is limited.
