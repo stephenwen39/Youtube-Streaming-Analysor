@@ -6,7 +6,7 @@ This is a project for analysis of YouTuber/vtuber streaming data, focusing on ch
 
 This data pipeline is currently migrated to the Google Cloud platform. Please see the simplified architecture diagram below for the system structure.
 
-📈 [Dashboard](https://lookerstudio.google.com/reporting/d0c687bd-2e96-4fac-ac9a-f1d5844fe8d8) here!
+📈 [Dashboard](https://lookerstudio.google.com/reporting/d0c687bd-2e96-4fac-ac9a-f1d5844fe8d8) 
 
 📝 [Article: System Architecture and Challenges](https://stephendatavisualization.substack.com/p/building-a-lambda-architecture-gcp)
 
