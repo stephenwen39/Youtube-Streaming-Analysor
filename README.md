@@ -14,13 +14,13 @@ This data pipeline is currently migrated to the Google Cloud platform. Please se
 
 -------------------------------
 
-潛在問題集(Potential issues list):
+🔎 Potential issues list (潛在 issues)
 
-1. 由於 batch update 的系統限制，如果直播影片被下架則只能抓到即時觀看數，其他資料無法抓取(Due to the system limitations of batch updates, if the live video is taken down, only the real-time view count can be captured, and other data cannot be retrieved.)
+1. Due to the system limitations of batch updates, if the live video is taken down, only the real-time view count can be captured, and other data cannot be retrieved.(由於 batch update 的系統限制，如果直播影片被下架則只能抓到即時觀看數，其他資料無法抓取)
 
 -------------------------------
 
-Change Log 更新時間軸
+🕑 Change Log (更新時間軸)
 
 2024.07.14: 更新 Looker Studio 視覺效果，加入 online 觀眾折線圖。
 
